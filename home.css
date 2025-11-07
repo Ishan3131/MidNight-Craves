@@ -1,0 +1,114 @@
+body {
+    margin: 0;
+    background-color: rgb(25, 0, 73);
+    height: 200vh;
+}
+
+#header {
+    background-image: url('./images/header_bg_image.webp');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+#brand_name {
+    display: flex;
+    width: fit-content;
+    height: fit-content;
+    margin: 0 auto;
+    padding-top: 10px;
+    gap: 20px;
+    box-shadow: 0 5px 30px black;
+    padding-right: 20px;
+    border-radius: 50px;
+    backdrop-filter: blur(3px);
+}
+
+#brand_name img {
+    width: 100px;
+    height: 100px;
+    border-radius: 20px;
+    border-radius: 50px;
+}
+
+#brand_name h1 {
+    font-size: 60px;
+    font-family: 'Healthy Food', 'Helvetica';
+    color: white;
+    align-items: center;
+    position: relative;
+    top: 20px;
+    margin: 0;
+}
+
+#navbar {
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    position: fixed;
+    top: 0;
+    border-radius: 20px;
+    transition: all .8s cubic-bezier(0.51, 0.38, 0.05, 1.42); 
+}
+.scroll {
+    background-color: rgba(185,150,250,0.1);
+    backdrop-filter: blur(10px);
+}
+
+#navbar_brand_name {
+    display: flex;
+    gap: 10px;
+    transition: opacity .3s;
+}
+.opacity-zero {
+    opacity: 0;
+}
+.opacity-one {
+    opacity: 1;
+}
+
+#navbar_brand_name img {
+    width: 60px;
+    height: 60px;
+    border-radius: 35px;
+}
+
+#navbar_brand_name h1 {
+    font-size: 30px;
+    font-family: 'Healthy Food', 'Helvetica';
+    color: white;
+    position: relative;
+    top: 15px;
+    margin: 0;
+}
+
+#navbar_btns {
+    display: flex;
+    align-items: center;
+}
+
+.navbar_btn {
+    text-decoration: none;
+    font-size: 20px;
+    font-family: 'Helvetica';
+    font-weight: bold;
+    color: white;
+    padding: 7px 20px;
+    margin: 0 5px;
+    border-radius: 20px;
+    transition: border-radius .5s;
+}
+.navbar_btn:hover {
+    border-radius: 5px;
+}
+
+#signin_btn {
+    background-color: rgba(185,150,255,0.2);
+    backdrop-filter: blur(10px);
+}
+
+#signup_btn {
+    background-color: #5858fd;
+    margin-right: 15px;
+}
