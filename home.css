@@ -5,7 +5,7 @@ body {
 }
 
 #header {
-    background-image: url('./images/header_bg_image.webp');
+    background-image: url('./images/header_bg.webp');
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -16,19 +16,16 @@ body {
     width: fit-content;
     height: fit-content;
     margin: 0 auto;
-    padding-top: 10px;
-    gap: 20px;
-    box-shadow: 0 5px 30px black;
+    gap: 0px;
+    /* box-shadow: 0 5px 30px black;
     padding-right: 20px;
     border-radius: 50px;
-    backdrop-filter: blur(3px);
+    backdrop-filter: blur(3px); */
 }
 
 #brand_name img {
-    width: 100px;
+    width: 120px;
     height: 100px;
-    border-radius: 20px;
-    border-radius: 50px;
 }
 
 #brand_name h1 {
@@ -37,7 +34,7 @@ body {
     color: white;
     align-items: center;
     position: relative;
-    top: 20px;
+    top: 25px;
     margin: 0;
 }
 
@@ -48,7 +45,7 @@ body {
     padding: 5px;
     position: fixed;
     top: 0;
-    border-radius: 20px;
+    border-radius:0 0 30px 30px ;
     transition: all .8s cubic-bezier(0.51, 0.38, 0.05, 1.42); 
 }
 .scroll {
@@ -69,9 +66,8 @@ body {
 }
 
 #navbar_brand_name img {
-    width: 60px;
+    width: 70px;
     height: 60px;
-    border-radius: 35px;
 }
 
 #navbar_brand_name h1 {
