@@ -141,18 +141,28 @@ body {
     font-weight: bold;
     border: 2px solid white;
     font-family: 'Helvetica';
+    transition: all .5s;
 }
+
 
 .browse-restaurant {
     margin: 0 5px 5px 5px;
     color: black;
     background-color: white;
 }
-
-.view-menu {
-    margin-left: 5px;
+.browse-restaurant:hover {
     background-color: transparent;
     color: white;
+}
+
+.view-menu {
+    margin: 0 0 5px 5px;
+    background-color: transparent;
+    color: white;
+}
+.view-menu:hover {
+    background-color: white;
+    color: black;
 }
 @media screen and (max-width: 624px) {
     #navbar_brand_name h1 {
@@ -165,6 +175,10 @@ body {
 
     .tagline-small {
         font-size: 7cqi;
+    }
+
+    .header-btn {
+        font-size: 5cqi;
     }
 }
 
@@ -201,7 +215,6 @@ body {
     gap: 20px;
 }
 
-
 .restaurant-card {
     display: flex;
     flex-wrap: wrap;
@@ -212,6 +225,10 @@ body {
     border: 1px solid #303564;
     border-radius: 20px;
     padding-bottom: 10px;
+    transition: all .5s;
+}
+.restaurant-card:hover {
+    scale: 1.1;
 }
 
 .card-img-rating {
@@ -223,11 +240,11 @@ body {
 }
 
 .restaurant-rating {
-    font-size: 15px;
+    font-size: 20px;
     font-weight: bold;
     font-family: 'Helvetica';
     color: white;
-    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, .7);
     padding: 5px 10px;
     border-radius: 20px;
     position: absolute;
@@ -238,6 +255,14 @@ body {
 @media screen and (max-width: 819px) {
     .restaurant-card {
         width: 90vw;
+    }
+
+    .heading h1 {
+        font-size: 9.5cqi;
+    }
+
+    .heading h3 {
+        font-size: 4cqi;
     }
 }
 
