@@ -1,39 +1,42 @@
-body {
+*{
     margin: 0;
-    background-color: rgb(25, 0, 73);
-    height: 200vh;
 }
 
+section:not(#header) * {
+    animation: scroll linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 20%;
+}
+@keyframes scroll {
+    0% {
+        opacity: 0;
+        scale: .5
+    }
+    100% {
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+body {
+    /* background-color: rgb(25, 0, 73); */
+    background-image: linear-gradient(
+    to bottom,
+    rgb(25, 0, 73) 100vh,
+    #0c0d30 140vh,
+    #0c0d30 100%
+    );
+
+}
+
+/* --------------------------------------------- Header Section ------------------------------------------------- */
 #header {
     background-image: url('./images/header_bg.webp');
     background-size: cover;
     background-position: 70% 0;
     height: 100vh;
 }
-
-#brand_name {
-    display: flex;
-    width: fit-content;
-    height: fit-content;
-    margin: 0 auto;
-    gap: 0px;
-}
-
-#brand_name img {
-    width: 120px;
-    height: 100px;
-}
-
-#brand_name h1 {
-    font-size: 60px;
-    font-family: 'Healthy Food', 'Helvetica';
-    color: white;
-    align-items: center;
-    position: relative;
-    top: 25px;
-    margin: 0;
-}
-
+/* ---------------- NavBar ------------------------ */
 #navbar {
     width: 80vw;
     display: flex;
@@ -99,6 +102,7 @@ body {
     margin-right: 15px;
 }
 
+/* ----------------------------Tagline Div ------------------------------- */
 .tagline_div {
     display: flex;
     flex-wrap: wrap;
@@ -127,16 +131,22 @@ body {
 
 .header-btn {
     font-size: 100%;
+    text-decoration: none;
+    font-size: 3cqi;
+    text-align: center;
     width: 330px;
     max-width: 100%;
     padding: 12px 0;
     border-radius: 10px;
     font-weight: bold;
     border: 2px solid white;
+    font-family: 'Helvetica';
 }
 
 .browse-restaurant {
     margin: 0 5px 5px 5px;
+    color: black;
+    background-color: white;
 }
 
 .view-menu {
@@ -144,7 +154,6 @@ body {
     background-color: transparent;
     color: white;
 }
-
 @media screen and (max-width: 624px) {
     #navbar_brand_name h1 {
         display: none;
@@ -157,4 +166,105 @@ body {
     .tagline-small {
         font-size: 7cqi;
     }
+}
+
+/* ---------------------------------------- Featured Restaurant Section -------------------------------------- */
+.heading {
+    width: 700px;
+    max-width: 100%;
+    height: 200px;
+    margin: auto;
+    container-type: inline-size;
+
+}
+
+.heading h1 {
+    font-size: 9cqi;
+    color: white;
+    text-align: center;
+    font-family: 'Helvetica';
+    text-shadow: 0 0 1px white, 0 0 4px white;
+}
+
+.heading h3 {
+    font-size: 3cqi;
+    color: rgb(234, 233, 233);
+    text-align: center;
+    margin-top: 10px;
+    font-family: 'Helvetica';
+}
+/* -----------------------------Restaurant Cards --------------------------- */
+.restuarant-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+
+.restaurant-card {
+    display: flex;
+    flex-wrap: wrap;
+    width: 600px;
+    height: 500px;
+    background-color: #191d3e;
+    backdrop-filter: blur(10px);
+    border: 1px solid #303564;
+    border-radius: 20px;
+    padding-bottom: 10px;
+}
+
+.card-img-rating {
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 60%;
+    border-radius: 10px 10px 0 0;
+}
+
+.restaurant-rating {
+    font-size: 15px;
+    font-weight: bold;
+    font-family: 'Helvetica';
+    color: white;
+    background-color: rgb(0, 0, 0);
+    padding: 5px 10px;
+    border-radius: 20px;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+}
+
+@media screen and (max-width: 819px) {
+    .restaurant-card {
+        width: 90vw;
+    }
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: center;
+}
+
+.restaurant-name {
+    color: white;
+    font-family: 'Helvetica';
+    font-size: 25px;
+    margin-left: 20px;
+}
+
+.restaurant-type {
+    color: rgb(204, 202, 202);
+    font-family: 'Helvetica';
+    font-size: 17px;
+    margin-left: 20px;
+}
+
+.restaurant-address {
+    color: white;
+    font-family: 'Helvetica';
+    font-size: 15px;
+    margin-left: 20px;
 }
