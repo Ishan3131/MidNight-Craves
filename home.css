@@ -14,7 +14,7 @@ section:not(#header) * {
 @keyframes scroll {
     0% {
         opacity: 0;
-        transform: translateX(-20px);
+        transform: translateX(-50px);
     }
     100% {
         opacity: 1;
@@ -30,7 +30,6 @@ body {
     #0c0d30 140vh,
     #0c0d30 100%
     );
-    height: 500vh;
 }
 
 /* --------------------------------------------- Header Section ------------------------------------------------- */
@@ -103,7 +102,7 @@ body {
 
 #signup_btn {
     background-color: #5858fd;
-    margin-right: 15px;
+    margin-right: 5px;
 }
 
 /* ----------------------------Tagline Div ------------------------------- */
@@ -146,6 +145,9 @@ body {
     border: 2px solid white;
     font-family: 'Helvetica';
     transition: all .5s;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
 }
 
 
@@ -330,9 +332,8 @@ body {
     background-color: black;
 }
 
-.working > div {
-    position: relative;
-    top: 200px;
+.working .heading {
+    margin-top: 200px;
 }
 
 .working-steps {
@@ -354,13 +355,15 @@ body {
 }
 
 .working-step-img {
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
     background-color: #303564;
     border: 2px solid #303564;
     border-radius: 50px;
     margin: 20px 0 30px 0;
     transition: border .5s;
+    padding: 20px;
+    color: white;
 }
 .step:hover .working-step-img {
     border: 2px solid rgb(225, 224, 224);
@@ -397,4 +400,150 @@ body {
     font-family: 'Helvetica';
     text-align: center;
     margin-top: 10px;
+}
+
+/* ------------------------------------ End Section -------------------------------- */
+.end {
+    padding-top: 200px;
+}
+
+.end-content-container {
+    width: 700px;
+    max-width: 100%;
+    container-type: inline-size;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.end svg {
+    color: white;
+    width: 70px;
+    height: 70px;
+    margin-bottom: 20px;
+}
+
+.end h1 {
+    color: white;
+    font-family: 'Helvetica';
+    font-size: 6cqi;
+    text-shadow: 0 0 1px white, 0 0 2px white;;
+}
+
+.end h3 {
+    color: #8182a6;
+    font-family: 'Helvetica';
+    font-size: 2.5cqi;
+}
+
+.end a {
+    text-decoration: none;
+    background-color: white;
+    color: black;
+    font-size: 2.5cqi;
+    font-weight: bold;
+    font-family: 'Helvetica';
+    padding: 15px 60px;
+    margin-top: 20px;
+    border-radius: 10px;
+    border: 1px solid white;
+    transition: all .5s;
+}
+.end a:hover {
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+}
+
+/* ---------------------------------- Footer ------------------------------ */
+.footer {
+    margin-top: 200px;
+    background-color: rgb(11, 11, 11);
+    display: flex;
+    flex-wrap: wrap;
+    font-family: 'Helvetica';
+    width: 100vw;
+    align-items: center;
+    gap: 100px;
+    border-top: 1px solid rgb(77, 77, 77);
+}
+/* -------------------- Footer Brand-name -------------- */
+.footer-brand {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+    width: 300px;
+}
+
+.footer-brand img {
+    width: 70px;
+    height: 60px;
+}
+
+.footer-brand h1 {
+    color: white;
+    font-size: 20px;
+}
+
+.footer-brand h3 {
+    color: rgb(194, 194, 194);
+    font-size: 15px;
+    text-align: center;
+}
+
+/* ---------------------- Footer Contact details -----------------*/
+.footer-contact {
+width: fit-content;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.footer-contact h1 {
+    color: white;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.contact-details {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.contact-details div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+    padding: 40px;
+    padding-left: 0;
+}
+
+.contact {
+    color: white;
+    font-size: 17px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact-logo {
+    width: 30px;
+    height: 30px;
+}
+
+@media screen and (max-width: 736px) {
+    .footer {
+        justify-content: center;
+    }
+
+    .footer-contact h1 {
+        text-align: center;
+    }
 }
