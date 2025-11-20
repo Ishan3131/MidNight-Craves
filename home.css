@@ -23,13 +23,21 @@ section:not(#header) * {
 }
 
 body {
-    /* background-color: rgb(25, 0, 73); */
     background-image: linear-gradient(
     to bottom,
     rgb(25, 0, 73) 100vh,
     #0c0d30 140vh,
     #0c0d30 100%
     );
+    animation: fadein 1s;
+}
+@keyframes fadein{
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 /* --------------------------------------------- Header Section ------------------------------------------------- */
