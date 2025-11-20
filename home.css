@@ -105,6 +105,13 @@ body {
     margin-right: 5px;
 }
 
+.navbar-name {
+    font-size: 32px;
+    font-family: "Jua", sans-serif;
+    color: white;
+    margin-right: 20px;
+}
+
 /* ----------------------------Tagline Div ------------------------------- */
 .tagline_div {
     display: flex;

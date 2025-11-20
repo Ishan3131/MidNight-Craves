@@ -1,0 +1,54 @@
+<!DOCTYPE html5>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MidNight Craves</title>
+    <link rel="icon" href="./images/logo.webp" />
+    <link rel="stylesheet" href="restaurant.css" />
+    <link href="https://fonts.cdnfonts.com/css/healthy-food" rel="stylesheet" loading="lazy" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bitcount+Single+Ink:wght@100..900&family=Itim&family=Jua&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">
+            <img src="./images/logo.webp">
+            <h1>MidNight Craves</h1>
+        </div>
+        
+        <div class="navbar-btns">
+            <a href="./menu.html" class="navbar-btn">View Menu</a>
+        </div>
+    </nav>
+    <div class="header">
+        <h1>Discover Restaurants</h1>
+        <h3>Choose from our curated selection of the finest restaurants</h3>
+        <div class="search-box">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" aria-hidden="true"><path d="m21 21-4.34-4.34"></path><circle cx="11" cy="11" r="8"></circle></svg>
+            <input type="text" class="restaurant-search" placeholder="Search restaurant or cuisines..." />
+        </div>
+        <div class="filter-box">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-funnel w-5 h-5 text-gray-400" aria-hidden="true"><path d="M10 20a1 1 0 0 0 .553.895l2 1A1 1 0 0 0 14 21v-7a2 2 0 0 1 .517-1.341L21.74 4.67A1 1 0 0 0 21 3H3a1 1 0 0 0-.742 1.67l7.225 7.989A2 2 0 0 1 10 14z"></path></svg>
+            <span>Filter & Sort: </span>
+            <select class="drop-down">
+                <option value="all" class="options">All Cuisines</option>
+                <option value="indian" class="options">Indian</option>
+                <option value="italian" class="options">Italian</option>
+                <option value="mexican" class="options">Mexican</option>
+                <option value="american" class="options">American</option>
+                <option value="asian" class="options">Asian</option>
+                <option value="desserts" class="options">Desserts</option>
+            </select>
+
+            <select class="drop-down">
+                <option value="highest-rated" class="options">Highest Rated</option>
+                <option value="fastes-delivery" class="options">Fastest Delivery</option>
+                <option value="lowest_fee" class="options">Lowest Fee</option>
+            </select>
+        </div>
+    </div>
+    <div class="container"></div>
+</body>
+</html>
