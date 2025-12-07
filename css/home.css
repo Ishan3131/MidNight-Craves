@@ -42,7 +42,7 @@ body {
 
 /* --------------------------------------------- Header Section ------------------------------------------------- */
 #header {
-    background-image: url('./images/header_bg.webp');
+    background-image: url('../images/header_bg.webp');
     background-size: cover;
     background-position: 70% 0;
     height: 100vh;

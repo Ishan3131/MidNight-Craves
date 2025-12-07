@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MidNight Craves</title>
     <link rel="icon" href="./images/logo.webp" />
-    <link rel="stylesheet" href="restaurant.css" />
+    <link rel="stylesheet" href="./css/restaurant.css" />
     <link href="https://fonts.cdnfonts.com/css/healthy-food" rel="stylesheet" loading="lazy" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,13 +13,13 @@
 </head>
 <body>
     <nav class="navbar">
-        <div class="nav-brand">
+        <a href="index.html" class="nav-brand">
             <img src="./images/logo.webp">
             <h1>MidNight Craves</h1>
-        </div>
+        </a>
         
         <div class="navbar-btns">
-            <button class="navbar-btn" style="background-color: transparent;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shopping-cart mr-2" aria-hidden="true"><circle cx="8" cy="21" r="1"></circle><circle cx="19" cy="21" r="1"></circle><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"></path></svg>Cart</button>
+            <button id="cartBtn" class="navbar-btn" style="background-color: transparent;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shopping-cart mr-2" aria-hidden="true"><circle cx="8" cy="21" r="1"></circle><circle cx="19" cy="21" r="1"></circle><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"></path></svg>Cart</button>
         </div>
     </nav>
     <div class="header">
@@ -29,7 +29,7 @@
         </div>
     </div>
 
-    <div class="food-cards-container">
+    <div id="food-cards-container" class="food-cards-container">
 
         <div class="restaurant-card">
             <div class="card-img-rating" style="background-image: url('https://b.zmtcdn.com/data/pictures/7/18168127/eb10e005efa0fe40408cea8c21768231_o2_featured_v2.jpg');">
@@ -78,9 +78,13 @@
             </div>
             <button class="card-view-menu">Add to cart</button>
         </div>
+    </div>
 
-
-        </div>
+    <div id="overlay"></div>
+    <div id="cart-section">
+        <svg id="remove-cart-section-btn" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x h-4 w-4" aria-hidden="true"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>
+    </div>
 
 </body>
+<script src="./js/menu.js"></script>
 </html>
