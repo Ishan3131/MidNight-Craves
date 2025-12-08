@@ -197,16 +197,23 @@ body {
     transition: all .5s;
     cursor: pointer;
 }
-.restaurant-card:hover {
-    scale: 1.1;
-}
 
 .card-img-rating {
-    background-size: cover;
+    background-size: 100%;
     background-position: center;
     width: 100%;
     height: 60%;
     border-radius: 10px 10px 0 0;
+    transition: all .4s;
+}
+
+.restaurant-card:hover {
+    border-color: #5a6099;
+    transform: translateY(-5px);
+}
+
+.restaurant-card:hover .card-img-rating {
+    background-size: 110%;
 }
 
 .restaurant-rating {
@@ -291,37 +298,4 @@ body {
     .card-view-menu {
         font-size: 3cqi;
     }
-}
-
-#overlay {
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: black;
-    z-index: 11;
-    display: none;
-    opacity: .6;
-    transition: opacity .3s;
-}
-
-#cart-section {
-    position: fixed;
-    right: 0;
-    top: 0;
-    width: 500px;
-    max-width: 100%;
-    height: 100vh;
-    background-color: #0c0d32;
-    z-index: 12;
-    transform: translateX(100%);
-    transition: all .3s;
-}
-
-#remove-cart-section-btn {
-    color: white;
-    position: absolute;
-    top: 5px;
-    left: 5px;
 }

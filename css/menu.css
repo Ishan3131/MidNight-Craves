@@ -1,0 +1,217 @@
+/* ---------------------------------- Cart Slide Bar -------------------------- */
+#overlay {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: black;
+    z-index: 11;
+    display: none;
+    opacity: .6;
+    transition: opacity .3s;
+}
+
+#cart-section {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 500px;
+    padding: 20px;
+    box-sizing: border-box;
+    max-width: 100%;
+    height: 100vh;
+    background-color: #0c0d32;
+    z-index: 12;
+    transform: translateX(100%);
+    transition: all .3s;
+}
+/* --------------------------------------------Cart Content --------------------------------- */
+/* ----------------------------- Cart Header ------------------------- */
+.cart-heading {
+    color: white;
+    font-family: 'Helvetica';
+    font-size: 25px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+
+}
+
+#remove-cart-section-btn {
+    color: white;
+    position: absolute;
+    font-size: 15px;
+    top: 20px;
+    right: 20px;
+}
+
+#empty-cart-message {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.cart-symbol {
+    color: rgb(142 143 181);
+    width: 60px;
+    height: 60px;
+}
+
+.empty-cart-text {
+    color: rgb(142 143 181);
+    font-size: 20px;
+    font-family: 'Helvetica';
+    font-weight: 1px;
+}
+/* -------------------------------- Cart Itmes List ---------------------- */
+#cart-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 100px;
+    margin-bottom: 20px;
+}
+
+.cart-item {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-between;
+    background-color: #14163d;
+    border-radius: 10px;
+    border: 1px solid #43457e;
+    padding: 10px;
+}
+.cart-item.remove {
+    animation: disappear .5s;
+}
+@keyframes disappear {
+    0% {
+        width: 95%;
+        height: 90px;
+    }
+    70% {
+        width: 0px;
+        height: 100px;
+    }
+    100% {
+        height: 0;
+        width: 0;
+    }
+}
+
+.item-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    border: none;
+    background-size: cover;
+    background-position: center;
+}
+@media screen and (max-width: 431px) {
+    .item-img {
+        width: 100%;
+    }
+}
+
+.item-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+.item-name {
+    font-size: 20px;
+    font-family: 'Helvetica';
+    color: white;
+    font-weight: 2px;
+}
+
+.item-price {
+    color: white;
+    font-size: 15px;
+    font-family: 'Helvetica';
+}
+
+.item-quantity {
+    display: flex;
+    justify-content: space-between;
+    background-color: #9192b5;
+    border-radius: 7px;
+    width: fit-content;
+    border: none;
+}
+
+.item-quantity-btn {
+    font-size: 20px;
+    background-color: transparent;
+    border: none;
+}
+
+.item-quantity-number {
+    padding: 5px 10px;
+    font-size: 15px;
+    font-family: 'Helvetica';
+}
+
+.item-remove-total {
+    display: flex;
+    flex-direction: column;
+    align-items: right;
+    justify-content: space-between;
+}
+
+.remove-item {
+    background: none;
+    border: none;
+    color: rgb(250, 107, 107);
+}
+
+.remove-item svg {
+    width: 20px;
+    height: 20px;
+}
+
+.item-remove-total > span {
+    color: white;
+    font-family: 'Helvetica';
+    font-size: 20px;
+}
+/* -------------------------------- Cart Bill ---------------------------- */
+#bill {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    color: white;
+    font-size: 25px;
+    font-weight: 5px;
+    font-family: 'Helvetica';
+    position: sticky;
+    bottom: 0;
+    border-top: 1px solid #3d3f78;
+}
+
+#bill div {
+    display: flex;
+    justify-content: space-between;
+}
+
+#place-order-btn {
+    width: 100%;
+    margin: 0 auto;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 7px;
+    border: none;
+}

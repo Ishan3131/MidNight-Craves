@@ -6,6 +6,7 @@
     <title>MidNight Craves</title>
     <link rel="icon" href="./images/logo.webp" />
     <link rel="stylesheet" href="./css/restaurant.css" />
+    <link rel="stylesheet" href="./css/menu.css">
     <link href="https://fonts.cdnfonts.com/css/healthy-food" rel="stylesheet" loading="lazy" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -38,7 +39,7 @@
             <div class="card-content">
                 <h1 class="restaurant-name">Amritsari Kulcha</h1>
                 <h3 class="restaurant-type">North Indian</h3>
-                <span class="restaurant-address">₹150 for one</span>
+                <span class="restaurant-address">₹<span class="food-price">150</span> for one</span>
             </div>
             <button class="card-view-menu">Add to cart</a>
         </div>
@@ -82,7 +83,43 @@
 
     <div id="overlay"></div>
     <div id="cart-section">
+        <h1 class="cart-heading">Your Cart</h1>
         <svg id="remove-cart-section-btn" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x h-4 w-4" aria-hidden="true"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>
+        <div id="empty-cart-message">
+            <svg class="cart-symbol" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shopping-cart w-16 h-16 mx-auto mb-4 text-gray-500" aria-hidden="true"><circle cx="8" cy="21" r="1"></circle><circle cx="19" cy="21" r="1"></circle><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"></path></svg>
+            <span class="empty-cart-text">Your cart is empty</span>
+        </div>
+
+        <div id="cart-list">
+            <div class="cart-item">
+                <div class="item-img" style="background-image: url(https://b.zmtcdn.com/data/pictures/7/18168127/eb10e005efa0fe40408cea8c21768231_o2_featured_v2.jpg);"></div>
+                <div class="item-details">
+                    <span class="item-name">Amritsari Kulcha</span>
+                    <span class="item-price">₹ <span class='item-price-number'>150</span> for one</span>
+                    <div class="item-quantity">
+                        <button class="item-quantity-btn" onclick="reduce(this)">-</button>
+                        <span class="item-quantity-number">1</span>
+                        <button class="item-quantity-btn" onclick="add(this)">+</button>
+                    </div>
+                </div>
+                <div class="item-remove-total">
+                    <button class="remove-item" onclick="removeItem(this)"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x h-4 w-4" aria-hidden="true"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg></button>
+                    <span>₹<span class="item-total-price">150</span></span>
+                </div>
+            </div>
+        </div>
+
+        <div id="bill">
+            <div id="total-items-div">
+                <span>Total Items</span>
+                <span id="totalItems">1</span>
+            </div>
+            <div id="total-price-div">
+                <span>Subtotal</span>
+                <span>₹<span id="grandTotal">150</span></span>
+            </div>
+            <button id="place-order-btn">Place Order</button>
+        </div>
     </div>
 
 </body>
