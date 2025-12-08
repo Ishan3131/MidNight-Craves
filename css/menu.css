@@ -1,4 +1,12 @@
 /* ---------------------------------- Cart Slide Bar -------------------------- */
+* {
+    margin: 0;
+}
+
+button {
+    cursor: pointer;
+}
+
 #overlay {
     width: 100vw;
     height: 100vh;
@@ -24,7 +32,8 @@
     background-color: #0c0d32;
     z-index: 12;
     transform: translateX(100%);
-    transition: all .3s;
+    transition: all .3s ;
+    overflow-y: auto;
 }
 /* --------------------------------------------Cart Content --------------------------------- */
 /* ----------------------------- Cart Header ------------------------- */
@@ -44,10 +53,16 @@
     font-size: 15px;
     top: 20px;
     right: 20px;
+    cursor: pointer;
+    transition: all .2s;
+}
+#remove-cart-section-btn:hover {
+    scale: 1.2;
+    color: rgb(253, 154, 154);
 }
 
 #empty-cart-message {
-    display: none;
+    display: flex;
     flex-direction: column;
     gap: 10px;
     justify-content: center;
@@ -72,7 +87,7 @@
 }
 /* -------------------------------- Cart Itmes List ---------------------- */
 #cart-list {
-    display: flex;
+    display: none;
     flex-direction: column;
     gap: 10px;
     margin-top: 100px;
@@ -82,8 +97,7 @@
 .cart-item {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
-    justify-content: space-between;
+    gap: 20px;
     background-color: #14163d;
     border-radius: 10px;
     border: 1px solid #43457e;
@@ -167,21 +181,28 @@
 }
 
 .item-quantity-btn {
-    font-size: 20px;
+    font-size: 25px;
     background-color: transparent;
     border: none;
 }
 
+.item-quantity-btn:hover {
+    background-color: #7e7f9d;
+    border-radius: 10px;
+}
+
 .item-quantity-number {
     padding: 5px 10px;
-    font-size: 15px;
+    font-size: 20px;
+    width: 20px;
+    text-align: center;
     font-family: 'Helvetica';
 }
 
 .item-remove-total {
+    margin-left: auto;
     display: flex;
     flex-direction: column;
-    align-items: right;
     justify-content: space-between;
 }
 
@@ -189,11 +210,20 @@
     background: none;
     border: none;
     color: rgb(250, 107, 107);
+    transition: all .2s;
+}
+.remove-item:hover {
+    color: white;
+    scale: 1.2;
+}
+.remove-item:active {
+    color: rgb(250, 107, 107);
 }
 
 .remove-item svg {
     width: 20px;
     height: 20px;
+    cursor: pointer;
 }
 
 .item-remove-total > span {
@@ -203,18 +233,19 @@
 }
 /* -------------------------------- Cart Bill ---------------------------- */
 #bill {
+    background-color: #0c0d32;
     padding-top: 20px;
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 20px;
     color: white;
     font-size: 25px;
-    font-weight: 5px;
     font-family: 'Helvetica';
     position: sticky;
     bottom: 0;
+    padding-bottom: 30px;
     border-top: 1px solid #3d3f78;
 }
 
@@ -230,4 +261,11 @@
     padding: 10px;
     border-radius: 7px;
     border: none;
+    transition: all .3s;
+}
+#place-order-btn:hover {
+    background-color: rgb(176, 179, 255);
+}
+#place-order-btn:active {
+    background-color: white;
 }

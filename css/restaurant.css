@@ -68,7 +68,7 @@ body {
     display: flex;
     gap: 5px;
     align-items: center;
-    transition: all .3s;
+    transition: all .3s, background-color .1s;
 }
 .navbar-btn:hover {
     text-shadow: 0 0 1px white, 0 0 3px white;
@@ -280,6 +280,9 @@ body {
    background-color: transparent;
    border: 1px solid white;
    color: white;
+}
+.card-view-menu:active {
+    background-color: white;
 }
 
 @media screen and (max-width: 819px) {

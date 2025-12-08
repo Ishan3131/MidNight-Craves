@@ -30,56 +30,7 @@
         </div>
     </div>
 
-    <div id="food-cards-container" class="food-cards-container">
-
-        <div class="restaurant-card">
-            <div class="card-img-rating" style="background-image: url('https://b.zmtcdn.com/data/pictures/7/18168127/eb10e005efa0fe40408cea8c21768231_o2_featured_v2.jpg');">
-                <span class="restaurant-rating">⭐️ 4.8</span>
-            </div>
-            <div class="card-content">
-                <h1 class="restaurant-name">Amritsari Kulcha</h1>
-                <h3 class="restaurant-type">North Indian</h3>
-                <span class="restaurant-address">₹<span class="food-price">150</span> for one</span>
-            </div>
-            <button class="card-view-menu">Add to cart</a>
-        </div>
-        
-        <div class="restaurant-card">
-            <div class="card-img-rating" style="background-image: url('https://b.zmtcdn.com/data/dish_photos/dac/74b7b5c78848e096cda81218c88a6dac.jpg?output-format=webp')">
-                <span class="restaurant-rating">⭐️ 4.9</span>
-            </div>
-            <div class="card-content">
-                <h1 class="restaurant-name">Pav Bhaji</h1>
-                <h3 class="restaurant-type">North Indian</h3>
-                <span class="restaurant-address">₹40 for one</span>
-            </div>
-            <button class="card-view-menu">Add to cart</button>
-        </div>
-        
-        <div class="restaurant-card">
-            <div class="card-img-rating" style="background-image: url('https://b.zmtcdn.com/data/dish_photos/de6/1a5bb87216226d4fc0f2066f161a9de6.jpeg?output-format=webp');">
-                <span class="restaurant-rating">⭐️ 4.9</span>
-            </div>
-            <div class="card-content">
-                <h1 class="restaurant-name">Andhra Kodi Pulav</h1>
-                <h3 class="restaurant-type">Adhra</h3>
-                <span class="restaurant-address">₹200 for one</span>
-            </div>
-            <button class="card-view-menu">Add to cart</button>
-        </div>
-        
-        <div class="restaurant-card">
-            <div class="card-img-rating" style="background-image: url('https://b.zmtcdn.com/data/dish_photos/10b/0113b00964b4bd0c408a6293c269210b.jpg?output-format=webp');">
-                <span class="restaurant-rating">⭐️ 4.8</span>
-            </div>
-            <div class="card-content">
-                <h1 class="restaurant-name">Dosa</h1>
-                <h3 class="restaurant-type">South Indian</h3>
-                <span class="restaurant-address">₹250 for one</span>
-            </div>
-            <button class="card-view-menu">Add to cart</button>
-        </div>
-    </div>
+    <div id="food-cards-container" class="food-cards-container"></div>
 
     <div id="overlay"></div>
     <div id="cart-section">
@@ -90,38 +41,22 @@
             <span class="empty-cart-text">Your cart is empty</span>
         </div>
 
-        <div id="cart-list">
-            <div class="cart-item">
-                <div class="item-img" style="background-image: url(https://b.zmtcdn.com/data/pictures/7/18168127/eb10e005efa0fe40408cea8c21768231_o2_featured_v2.jpg);"></div>
-                <div class="item-details">
-                    <span class="item-name">Amritsari Kulcha</span>
-                    <span class="item-price">₹ <span class='item-price-number'>150</span> for one</span>
-                    <div class="item-quantity">
-                        <button class="item-quantity-btn" onclick="reduce(this)">-</button>
-                        <span class="item-quantity-number">1</span>
-                        <button class="item-quantity-btn" onclick="add(this)">+</button>
-                    </div>
-                </div>
-                <div class="item-remove-total">
-                    <button class="remove-item" onclick="removeItem(this)"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x h-4 w-4" aria-hidden="true"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg></button>
-                    <span>₹<span class="item-total-price">150</span></span>
-                </div>
-            </div>
-        </div>
+        <div id="cart-list"></div>
 
         <div id="bill">
             <div id="total-items-div">
                 <span>Total Items</span>
-                <span id="totalItems">1</span>
+                <span id="totalItems">0</span>
             </div>
             <div id="total-price-div">
                 <span>Subtotal</span>
-                <span>₹<span id="grandTotal">150</span></span>
+                <span>₹<span id="grandTotal">0</span></span>
             </div>
             <button id="place-order-btn">Place Order</button>
         </div>
     </div>
 
 </body>
+<script src="./js/foodmenu.js"></script>
 <script src="./js/menu.js"></script>
 </html>
