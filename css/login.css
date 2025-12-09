@@ -3,7 +3,7 @@
 }
 
 body {
-    background-image: url('./images/header_bg.webp');
+    background-image: url('../images/header_bg.webp');
     background-size: cover;
     background-position: 75%;
     backdrop-filter: blur(8px);
