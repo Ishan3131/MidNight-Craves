@@ -20,24 +20,24 @@ for(let data of restaurants){
 // Filter Function
 let allRestaurants = document.querySelectorAll('.restaurant-card');
 let select = document.querySelector('.drop-down');
-
-function filter() {
-    let targetValue = select.value;
-    for(let elem of allRestaurants) {
-        if(elem.querySelector('.restaurant-type').innerText.toLowerCase().includes(targetValue)) {
-            elem.style.display = 'flex'
-        }
-        else {
-            elem.style.display = 'none';
-        }
-    }
-}
-
-select.addEventListener('change', filter)
-
-// Search Function
 let searchBar = document.querySelector('.restaurant-search');
-function search(){
+
+// function filter() {
+//     let targetValue = select.value;
+//     let target = searchBar.value.trim().toLowerCase();
+//     for(let elem of allRestaurants) {
+//         if(elem.querySelector('.restaurant-type').innerText.toLowerCase().includes(targetValue) && ) {
+//             elem.style.display = 'flex'
+//         }
+//         else {
+//             elem.style.display = 'none';
+//         }
+//     }
+// }
+
+
+// Search+Filter Function
+function filterSearch(){
     let target = searchBar.value.trim().toLowerCase();
     let targetType = select.value;
     for(let elem of allRestaurants) {
@@ -50,4 +50,5 @@ function search(){
     }
 }
 
-searchBar.addEventListener('input', search)
+searchBar.addEventListener('input', filterSearch)
+select.addEventListener('change', filterSearch)
