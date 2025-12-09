@@ -5,25 +5,43 @@ for(let data of restaurants){
     card.className = 'restaurant-card';
     card.innerHTML = `
     <div class="card-img-rating" style="background-image: url(${data.img});">
-        <span class="restaurant-rating">⭐️ ${data.rating}</span>
+    <span class="restaurant-rating">⭐️ ${data.rating}</span>
     </div>
     <div class="card-content">
-        <h1 class="restaurant-name">${data.name}</h1>
-        <h3 class="restaurant-type">${data.categories}</h3>
-        <span class="restaurant-address">${data.address}</span>
+    <h1 class="restaurant-name">${data.name}</h1>
+    <h3 class="restaurant-type">${data.categories}</h3>
+    <span class="restaurant-address">${data.address}</span>
     </div>
     <a href="./menu.html" class="card-view-menu">View Menu</a>
     `;
     container.appendChild(card);
 }
 
-// Search Feature
+// Filter Function
+let allRestaurants = document.querySelectorAll('.restaurant-card');
+let select = document.querySelector('.drop-down');
+
+function filter() {
+    let targetValue = select.value;
+    for(let elem of allRestaurants) {
+        if(elem.querySelector('.restaurant-type').innerText.toLowerCase().includes(targetValue)) {
+            elem.style.display = 'flex'
+        }
+        else {
+            elem.style.display = 'none';
+        }
+    }
+}
+
+select.addEventListener('change', filter)
+
+// Search Function
 let searchBar = document.querySelector('.restaurant-search');
-function filter(){
+function search(){
     let target = searchBar.value.trim().toLowerCase();
-    let domain = document.querySelectorAll('.restaurant-card');
-    for(let elem of domain) {
-        if(elem.querySelector('.restaurant-name').innerText.toLowerCase().includes(target)){
+    let targetType = select.value;
+    for(let elem of allRestaurants) {
+        if(elem.querySelector('.restaurant-name').innerText.toLowerCase().includes(target) && elem.querySelector('.restaurant-type').innerText.toLowerCase().includes(targetType)){
             elem.style.display = 'flex';
         }
         else {
@@ -32,4 +50,4 @@ function filter(){
     }
 }
 
-searchBar.addEventListener('input', filter)
+searchBar.addEventListener('input', search)

@@ -136,9 +136,9 @@ function addToCart(btn){
     }
 }
 
-// Search Feature
+// Search Function
 let searchBar = document.querySelector('.restaurant-search');
-function filter(){
+function search(){
     let target = searchBar.value.trim().toLowerCase();
     let domain = document.querySelectorAll('.restaurant-card');
     for(let elem of domain) {
@@ -151,4 +151,4 @@ function filter(){
     }
 }
 
-searchBar.addEventListener('input', filter)
+searchBar.addEventListener('input', search)
