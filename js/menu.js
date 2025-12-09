@@ -4,6 +4,7 @@ let cartBtn = document.getElementById('cartBtn');
 let cardsContainer = document.getElementById('food-cards-container');
 let removeCartSection = document.getElementById('remove-cart-section-btn')
 
+// menu loading
 let foodcard;
 for(let dish of foodmenu){
     foodcard = document.createElement('div')
@@ -134,3 +135,20 @@ function addToCart(btn){
         }
     }
 }
+
+// Search Feature
+let searchBar = document.querySelector('.restaurant-search');
+function filter(){
+    let target = searchBar.value.trim().toLowerCase();
+    let domain = document.querySelectorAll('.restaurant-card');
+    for(let elem of domain) {
+        if(elem.querySelector('.restaurant-name').innerText.toLowerCase().includes(target)){
+            elem.style.display = 'flex';
+        }
+        else {
+            elem.style.display = 'none';
+        }
+    }
+}
+
+searchBar.addEventListener('input', filter)
